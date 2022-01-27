@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./styles/script.js" defer></script>
+    <title>Vkyc Form</title>
+    
+  </head>
+  <body>
+  
+    <form action="/submitInformation" method="POST" class="form" enctype="multipart/form-data">
+      <h1 class="floating text-center">KYeasy</h1>
+      <!-- Progress bar -->
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        
+        <div class="progress-step progress-step-active" data-title="Customer Information"></div>
+        <div class="progress-step" data-title="Documents Required"></div>
+        <div class="progress-step" data-title="Bank Selection"></div>
+        
+      </div>
+
+      <!-- Steps -->
+      <div class="form-step form-step-active">
+        <div class="input-group">
+          <label class="pure-material-textfield-outlined">
+          <input type="text" placeholder=" " name="fullname" id="fullname">
+          <span>Fullname</span>
+          </label>
+        </div>
+        <div class="input-group">
+          <label class="pure-material-textfield-outlined" >
+          <input type="tel" name="phoneno" id="phoneno" placeholder=" ">
+          <span>Phone Number</span>
+          </label>
+        </div>
+        <div class="input-group">
+          <label class="pure-material-textfield-outlined" >
+            <input type="email" name="email" id="email" placeholder=" ">
+            <span>Email Id</span>
+            </label>
+          </div>
+        <div class="">
+          <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <div class="input-group">
+          <label class="pure-material-textfield-outlined">
+          <input type="file" name="aadhar" id="aadhar" placeholder=" " >
+          <span>Aadhar Card</span>
+          </label>
+        </div>
+        <div class="input-group">
+          <label class="pure-material-textfield-outlined" >
+          <input type="file" name="pan" id="pan" placeholder=" ">
+          <span>Pan Card</span>
+          </label>
+        </div>
+        <div class="input-group">
+          <label class="pure-material-textfield-outlined" >
+            <input type="file" name="photo" id="photo" placeholder=" ">
+            <span>Your Photograph</span>
+          </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        
+          <div class="input-group">
+            <label class="pure-material-textfield-outlined" style="width: 100%;">
+            <input list="banks" name="bankname" id="banknam" value="All" placeholder=" ">
+            <span>Select Bank</span>
+            </label>
+            <datalist id ="banks">
+                <option value="All Banks" >
+                <option value="Bank of Baroda">
+            <option value="Bank of India">
+            <option value="Bank of Maharashtra">
+            <option value="Canara Bank">
+            <option value="Central Bank of India">
+            <option value="Indian Bank">
+            <option value="Indian Overseas Bank">
+            <option value="Punjab National Bank">
+            <option value="State Bank of India">
+            <option value="Union Bank of India">
+            <option value="Axis Bank Ltd">
+            <option value="Dhanlaxmi Bank Ltd">
+            <option value="HDFC Bank Ltd">
+            <option value="ICICI Bank Ltd">
+            <option value="Induslnd Bank Ltd">
+            <option value="IDFC First Bank Ltd">
+            <option value="Kotak Mahindra Bank Ltd">
+            <option value="YES Bank Ltd">
+            <option value="IDBI Bank Ltd">
+            <option value="Paytm Payments Bank Limited">
+            <option value="HSBC Ltd">
+
+            </datalist>
+          </div>
+          <div class="input-group">
+            <label class="pure-material-textfield-outlined" for="end-time">
+              <input type="time" name="apttime" id="end-time" min="09:00:00" max="17:00:00" step="900" placeholder=" ">
+              <span>Book a slot</span>
+              </label>
+            </div>
+        <div class="btns-group">
+            <a href="#" class="btn btn-prev">Previous</a>
+          <input type="submit" value="submit" class="btn">
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

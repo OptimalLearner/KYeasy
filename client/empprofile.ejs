@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<title> KYeasy | Employee Dashboard </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">-->
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/style/dashboard_style.css">
+
+
+<body style="background-color: #f7e8fc;">
+
+<!-- Navbar 343434 -->
+<div class="w3-top">
+  <div class="w3-container w3-theme-d3 w3-center ">
+  
+   <h1 class=" w3-bar-item w3-theme-d3" style="font-size: 40px;"><b>KYeasy</b></h1>  
+   </div>
+  
+  </div>
+
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:100px">       
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white" style="position: absolute; width: 350px" >
+        <div class="w3-container">
+         <h4 class="w3-center">My Profile</h4>
+         <p class="w3-center"><img src="/style/images/avatar-2.jpg" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-hand-o-right fa-fw w3-margin-right w3-text-theme"></i> Dhaval Sharma</p>
+         <p><i class="fa fa-hand-o-right fa-fw w3-margin-right w3-text-theme"></i> Kotak Mahindra Bank</p>
+         <p><i class="fa fa-hand-o-right fa-fw w3-margin-right w3-text-theme"></i> DS001253 </p>
+        </div>
+      </div>
+      </div>
+      </div>
+      
+      
+      <div class="w3-col m7" style="position: fixed; margin-left: 25%">
+    
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+              <div class="w3-container w3-padding">
+        <div class="tab">
+          <button class="tablinks " onclick="openTable(event, 'Upcoming')" id="defaultOpen">Upcoming</button> &nbsp; &nbsp;
+          <button class="tablinks " onclick="openTable(event, 'Pending')">Completed</button>
+        </div>
+      
+    
+        <div id="Upcoming" class="tabcontent">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Link</th>
+              <th>Appointment Time</th>
+              <th> </th>
+            </tr>
+            <% for(var i=0; i<upcoming.length; i++) {%>
+                <tr>
+                  <td><%= upcoming[i].name %></td>
+                  <td><a href="<%=link%>/employee-meet/<%= upcoming[i].meet_id %>" id="<%= upcoming[i].meet_id %>" class="meet_link" target="_blank">Meet Link </a></td>
+                  <td><%= upcoming[i].time_slot %></td>
+                  <td> <a href="/onGoing" taregt=_blank class="btn border border-primary" style="display:none;" id="I<%= upcoming[i].meet_id %>-button"> ONGOING </a> </td>
+              </tr>
+            <% } %>
+            <% for(var i=0; i<pending.length; i++) {%>
+              <tr>
+                <td><%= pending[i].name %></td>
+                <td><a href="<%=link%>/employee-meet/<%= pending[i].meet_id %>" id="<%= pending[i].meet_id %>" class="meet_link" target="_blank">Meet Link </a></td>
+                <td><%= pending[i].time_slot %></td>
+                <td> <a href="/onGoing" taregt=_blank class="btn border border-primary" style="display:none;" id="I<%= pending[i].meet_id %>-button"> ONGOING </a> </td>
+            </tr>
+          <% } %>
+          </table>
+          
+          </div>
+          <div id="Pending" class="tabcontent">
+            <table>
+           <tr>
+             <th>Sr No.</th>
+             <th>Name</th>
+           </tr>
+
+             <% for(var i=0; i<completed.length; i++) {%>
+              <tr>
+               <td> <%= i+1 %> </td>
+               <td><a href="/userDetailComplete" target="_blank"><%= completed[i].name %></a></td>
+               </tr>
+               <% } %>
+                      
+        
+         </table>
+         
+        
+        </div>
+        </div>
+         </div>  
+        </div>
+      </div>
+      </div>
+      </div>       
+</div>
+         
+
+<script>
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+function openTable(evt, tableName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tableName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+const total = document.querySelectorAll(".meet_link");
+for(let i=0;i<total.length;i++) {
+    total[i].addEventListener('click', (e) => {
+      let id = total[i].getAttribute("id")
+        select = "#I"+id+"-button"
+        console.log(select)
+        document.querySelector(select).style.cssText = "display: block!important";
+    })
+}
+</script>
+
+</body>
+</html> 

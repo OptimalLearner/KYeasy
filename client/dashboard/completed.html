@@ -1,0 +1,151 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <title>Client Details</title>
+    <style>
+      body {
+        background-color: #ffffff;
+        background-image: url(../style/images/vkyc_dashboards.png);
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-position: left 100px top 150px;
+        padding-left: 50px;
+        background-size: 500px;
+        font-family: "Ubuntu", sans-serif;
+        overflow: hidden;
+      }
+      h1 {
+        color: #260452d3;
+        position: absolute;
+        margin-left: 830px;
+        font-size: 70px;
+
+        margin-top: -100px;
+      }
+      h2 {
+        text-align: center;
+        padding-top: 10px;
+        color: #ffffff;
+      }
+      .main {
+        background-color: #2d397f;
+        margin-left: 550px;
+        margin-top: 150px;
+        width: 800px;
+        height: 350px;
+
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+        background: rgba(9, 32, 240, 0.356);
+      }
+      .floating {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: bold;
+
+        -webkit-animation-name: Floatingx;
+        animation-name: Floatingx;
+        -webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -moz-animation-name: Floating;
+
+        -moz-animation-duration: 1.5s;
+
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: ease-in-out;
+      }
+
+      @keyframes Floatingx {
+        from {
+          -webkit-transform: translate(0, 0px);
+        }
+        65% {
+          -webkit-transform: translate(0, 15px);
+        }
+        to {
+          -webkit-transform: translate(0, -0px);
+        }
+      }
+
+      @keyframes Floating {
+        from {
+          -moz-transform: translate(0, 0px);
+        }
+        65% {
+          -moz-transform: translate(0, 15px);
+        }
+        to {
+          -moz-transform: translate(0, -0px);
+        }
+      }
+      .row {
+        display: flex;
+      }
+
+      /* Create two equal columns that sits next to each other */
+      .column {
+        flex: 50%;
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+      }
+      h3 {
+        padding-left: 30px;
+        color: #ffffff;
+      }
+      a:link {
+        text-decoration: none;
+        color: #260452d3;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #260452d3;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #260452d3;
+      }
+
+      a:active {
+        text-decoration: underline;
+        color: #260452d3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>KYeasy</h1>
+    <div class="main">
+      <h2>CLIENT DETAILS</h2>
+      <hr class="m-0" />
+      <div class="row">
+        <div class="column">
+          <h3>Name:</h3>
+          <h3>Eamil:</h3>
+          <h3>Phone:</h3>
+          <h3>Aadhar Number:</h3>
+          <h3>IP address:</h3>
+        </div>
+        <div class="column">
+          <h3>Aadhar Card: &nbsp; <a href="#">View</a></h3>
+          <h3>Pan Card: &nbsp; <a href="#">View</a></h3>
+          <h3>Photo Selfie: &nbsp; <a href="#">View</a></h3>
+          <h3>Location:</h3>
+          <h3>Video KYC: &nbsp; <a href="#">LINK</a></h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

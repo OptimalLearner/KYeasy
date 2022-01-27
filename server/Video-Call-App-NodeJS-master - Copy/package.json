@@ -1,0 +1,22 @@
+{
+  "name": "kyc-hyperledger",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongodb": "^4.3.0",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "watch": "nodemon --watch \"src/\" --exec \"node src/app.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+}

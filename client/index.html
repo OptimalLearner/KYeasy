@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KYeasy</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/style.css" type="text/css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/7.3.0/adapter.min.js"
+      integrity="sha256-2qQheewaqnZlXJ3RJRghVUwD/3fD9HNqxh4C+zvgmF4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+    <script src="https://cdn.rawgit.com/yahoo/xss-filters/master/dist/xss-filters.js"></script>
+    <script src="assets/js/autolink.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="assets/js/chatbot.js"></script>
+
+    <!-- Owl Carousal CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- <a href="/set-appointment" style="background-color: Dodgerblue; color: whitesmoke; padding: 20px 30px; border: 0; cursor: pointer; text-decoration: none;" class="d-flex justify-content-center align-items-center"> Make an appointment </a> -->
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark py-0">
+      <div class="container-fluid py-md-1 px-0">
+        <h1 style="color: #a537f1; margin-left: 30px">KYeasy</h1>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse default-font"
+          id="navbarTogglerDemo02"
+        >
+          <ul
+            class="navbar-nav me-xl-auto me-lg-2 mb-2 mb-lg-0 ms-xl-5 ps-xl-5"
+          >
+            <li class="nav-item me-xl-3 ms-xl-5">
+              <a class="nav-link active" id="default-link" href="#">Home</a>
+            </li>
+            <li class="nav-item me-md-3">
+              <a class="nav-link" id="why-share-link" href="#whyvkycpart"
+                >Why vKYC?</a
+              >
+            </li>
+            <li class="nav-item me-md-3">
+              <a class="nav-link" href="#make-appointment">
+                Book an appointment
+              </a>
+            </li>
+            <li class="nav-item me-md-3">
+              <a class="nav-link" id="partners-link" href="#banks"
+                >Connected Banks</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main-container default-font">
+      <div class="row m-0">
+        <div
+          class="col-12 col-md-6 d-flex justify-content-center align-items-center flex-column main-container-left text-center px-4"
+        >
+          <h2>KYeasy makes the vKYC process super easy</h2>
+          <h3>
+            To complete your vKYC process at the ease of your home all you need
+            to do is book an appointement using any one of the below given
+            options.
+          </h3>
+          <div class="btns-grp">
+            <img src="style/images/webportal.jpeg" class="floating" />
+            <img src="style/images/imgg.png" class="floating" />
+          </div>
+
+          <div class="btns-group">
+            <a
+              href="#make-appointment"
+              class="btn me-md-3 mt-3 get-started-btn d-flex justify-content-center align-items-center"
+              style="font-weight: bold"
+            >
+              via webportal
+            </a>
+
+            <a
+              href="https://web.whatsapp.com/"
+              target="_blank"
+              class="btn me-md-3 mt-3 get-started-btn d-flex justify-content-center align-items-center"
+              style="font-weight: bold"
+            >
+              via +91 8791361118
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-6 d-flex justify-content-center align-items-center flex-column main-container-right"
+        >
+          <img
+            src="style/images/first-page-kyc.jpg"
+            style="height: 400px; width: 600px"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="text-container d-flex justify-content-center align-items-center flex-md-row flex-column default-font"
+    >
+      <div class="text d-flex justify-content-center align-items-center">
+        <span class="divider"></span>
+        Your One Stop Solution For vKYC
+        <span class="divider"></span>
+      </div>
+    </div>
+
+    <!-- Aadhar Input -->
+    <div
+      class="whyvkyc-container d-flex justify-content-center align-items-center flex-column default-font"
+      id="whyvkycpart"
+    >
+      <div class="row my-md-5 w-75">
+        <div
+          class="col-12 col-md-3 offset-md-1 d-flex justify-content-center align-items-center"
+        >
+          <h2>Why vKYC?</h2>
+        </div>
+        <div
+          class="col-12 col-md-5 offset-md-1 d-flex justify-content-center align-items-center"
+        >
+          <ol>
+            <li>
+              No in-person visit to banks for KYC verification, just be
+              physically present in India
+            </li>
+            <li>Reduces paperwork</li>
+            <li>Prevents scams and malicious activity from taking place</li>
+            <li>KYC user details stored on Blockchain</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aadhar Input -->
+    <div
+      class="aadhar-container d-flex justify-content-center align-items-center flex-column default-font"
+      id="make-appointment"
+    >
+      <h2 class="aadhar-title text-center pt-5">Book An Appointment</h2>
+      <hr class="hr3" />
+      <div class="row my-md-5 w-75">
+        <div class="col-12 col-md-6">
+          <form method="POST" action="http://localhost:3000/getAadhar">
+            <div class="mb-3" style="width: 100%">
+              <label for="aadhar" class="form-label"
+                >Proceed By Entering Your Aadhar Number</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="aadhar"
+                name="aadhar"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-block aadhar-btn">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="col-12 col-md-6 d-flex justify-content-center align-items-center flex-column"
+        >
+          <img
+            src="/style/images/aadhar_logo.png"
+            style="width: 330px; height: 170px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Partners Container -->
+    <div class="company-container default-font" id="banks">
+      <div
+        class="container d-flex justify-content-center align-items-center flex-column"
+      >
+        <h2 class="our-partners-title text-center pt-5">Connected Banks</h2>
+        <hr class="hr4" />
+        <div class="owl-carousel owl-theme mt-5">
+          <div class="item d-flex justify-content-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Axis_Bank_logo.svg/450px-Axis_Bank_logo.svg.png"
+              alt="Axis Bank Logo"
+            />
+          </div>
+          <div class="item d-flex justify-content-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/5/58/State_Bank_of_India_logo.svg/159px-State_Bank_of_India_logo.svg.png"
+              alt="SBI Logo"
+            />
+          </div>
+          <div class="item d-flex justify-content-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/ICICI_Bank_Logo.svg/456px-ICICI_Bank_Logo.svg.png"
+              alt="ICICI Logo"
+            />
+          </div>
+          <div class="item d-flex justify-content-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/HDFC-Bank-Logo.svg/1125px-HDFC-Bank-Logo.svg.png"
+              alt="HDFC Logo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-bottom-container text-center default-font">
+      &copy; KYeasy | All Rights Reserved
+    </footer>
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap 5 JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Owl Carousal JS CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 100,
+        navigation: true,
+        autoplay: true,
+        autoplayTimeout: 2500,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
